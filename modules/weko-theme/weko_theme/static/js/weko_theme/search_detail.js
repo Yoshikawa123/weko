@@ -351,20 +351,8 @@
             }
 
             $scope.detail_search_clear = function () {
-                $scope.detail_search_key = [];
-                $scope.default_search_key = [];
-                $http({
-                    method: "GET",
-                    url: "/api/advanced-search/condition",
-                 }).then(function successCallback(response) {
-                    sessionStorage.setItem('init_detail_condition', angular.toJson(response.data))
-                    $scope.initDataKey()
-                    $scope.reset_data();
-                    sessionStorage.setItem('detail_search_conditions', angular.toJson($scope.condition_data));
-                 }, function errorCallback(error){
-                    console.log(error);
-                 });
-                
+                $scope.reset_data();
+                sessionStorage.setItem('detail_search_conditions', angular.toJson($scope.condition_data));
             }
 
             // set search options
@@ -489,8 +477,7 @@
                 sessionStorage.removeItem('init_detail_condition');
             }
             else{
-                $scope.initDataKey()
-                $scope.initData()
+                $scope.setupInitData()
             }
             
         }
