@@ -484,7 +484,7 @@ def get_access_counter_record(repository_id, current_language):
                         end_date = date.today().strftime("%Y-%m-%d")
                         top_view_total_by_widget_id = QueryCommonReportsHelper.get(
                             start_date=start_date, end_date=end_date,
-                            event='top_page_access')
+                            event='topf_page_access')
                         count = 0
                         for item in top_view_total_by_widget_id['all'].values():
                             count = count + int(item['count'])
