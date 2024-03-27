@@ -2,7 +2,7 @@
 #
 # This file is part of WEKO3.
 # Copyright (C) 2017 National Institute of Informatics.
-#
+#a
 # WEKO3 is free software; you can redistribute it
 # and/or modify it under the terms of the GNU General Public License as
 # published by the Free Software Foundation; either version 2 of the
